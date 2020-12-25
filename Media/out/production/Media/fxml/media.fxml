@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="233.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/nanabumkit.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="9.0" layoutY="228.0" prefHeight="63.0" prefWidth="584.0">
+         <children>
+            <Text fx:id="time" layoutX="502.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time" />
+            <ProgressBar fx:id="progress" layoutX="61.0" layoutY="5.0" prefHeight="18.0" prefWidth="427.0" progress="0.0" HBox.hgrow="ALWAYS" />
+            <HBox layoutX="123.0" layoutY="30.0" prefHeight="26.0" prefWidth="350.0" spacing="20.0">
+               <children>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" text="&lt;&lt;" />
+                  <Button fx:id="play" mnemonicParsing="false" onAction="#handlePlay">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/play.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="pause" mnemonicParsing="false" onAction="#handlePause" prefHeight="25.0" prefWidth="30.0" text="II" />
+                  <Button fx:id="next" mnemonicParsing="false" onAction="#handleNext" text="&gt;&gt;" />
+                  <Button fx:id="volumeUp" mnemonicParsing="false" onAction="#handleVolumeUp">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/volumeUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="volumeDown" mnemonicParsing="false" onAction="#handleVolumeDown">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/volumeDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Text fx:id="currentTime" layoutX="26.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time" wrappingWidth="33.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
